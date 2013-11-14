@@ -19,7 +19,7 @@ The second extra module is ZODB, which provides an easy interface on to which to
 ##`Phred`, `Phrap`, and `Consed`
 A core process in generating DNA barcodes consists of producing assemblies of raw DNA sequence data for each individual sample. One of the best assemblers out, in particular for Sanger sequence data - and soon for NGS type data, `Phred` (by Brent Ewing) is a base-caller that outputs empirically validated quality scores; `Phrap` (by Phil Green) is an assembler; and `Consed` (David Gordon) is an assembly visualisation and editting tool. The three tools work on all major computing platforms. Academic licenses are available for free, but commercial licenses are paid. All three tools are intellectual property of the University of Washington. Instructions on how to obtain a license, download, install, and use `Phred`, `Phrap`, and `Consed` can be found [here](http://www.phrap.org/consed/consed.html#howToGet).
 
-*Only `Phred` and `Phrap` are essential.*
+**Only `Phred` and `Phrap` are essential.**
 
 `Consed` is only needed as a post-processing tool, to examine DNA barcodes that do not pass QC. **Even though `Consed` is not needed, we highly recommend its use.**
 
