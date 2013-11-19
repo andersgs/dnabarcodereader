@@ -38,6 +38,26 @@ Go to the MacPorts download [page](http://www.macports.org/install.php). Select 
 
         sudo port install py27-zodb 
 
+#### Test your `Python` installation:
+At the end of step 7, you should be able to type the following in your command line prompt:
+
+        python
+        
+You should then see something similar to the following printed on the screen, followed by the `Python` three chevron (>>>) command prompt:
+
+        Python 2.7.5 (default, Aug  1 2013, 01:01:17) 
+        [GCC 4.2.1 Compatible Apple Clang 4.1 ((tags/Apple/clang-421.11.66))] on darwin
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>>
+
+If you see this, you have successfully installed `Python`. You can type `ctrl-d` at any time to exit the `Python` interpreter, and return to the bash command prompt.
+
+Before you exit the `Python` interpreter, let us see if `BioPython` and `ZODB` have correctly installed too. With the cursor next to the three chevrons, type and then press return:
+
+        >>> from Bio import SeqIO
+
+
+
 ###Step 4 – Install `Phred`, `Phrap`, and `Consed`:
 1.  Contact the authors to obtain a license (instructions here: [http://www.phrap.org/consed/consed.html#howToGet](http://www.phrap.org/consed/consed.html#howToGet). Download the installers once you receive the email with instructions on where to download them from.
 
