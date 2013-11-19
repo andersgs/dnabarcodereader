@@ -25,12 +25,12 @@ A core process in generating DNA barcodes consists of producing assemblies of ra
 
 ###References
 Ewing, B., Hillier, L., Wendl, M.,  and Green, P., 1998, "Basecalling of automated 
-         sequencer traces using phred.  I. Accuracy assesment", Genome Research 8: 175-185.
+:         sequencer traces using phred.  I. Accuracy assesment", Genome Research 8: 175-185.
 Ewing, B. and Green, P., 1998, "Basecalling of automated sequencer traces using 
-         phred.  II. Error probabilities", Genome Research 8: 186-194.  
+:         phred.  II. Error probabilities", Genome Research 8: 186-194.
 Green, P., 1994, Phrap, unpublished.  http://www.phrap.org
 Gordon, D., Abajian, C., and Green, P., 1998, "Consed: A grapical tool for sequence 
-         finishing", Genome Research 8:195-202.
+:         finishing", Genome Research 8:195-202.
 
 ##`PolyPhred`
 DNA barcodes are generally designed around a mitochondrial or chloroplast gene. These are haploid genomes, and thus carry the special assumption that there should be no variation within individuals at a particular site. This is convenient from the barcode perspective. Each sample should have a string of unambiguous bases that represent its DNA barcode. When variation does occur, two possible explanations are possible: (1) there is experiment error (e.g., sample was contaminated with DNA from another sample); or (2) there is something biologically interesting happening (e.g., blood sample is infected with multiple lineages of a parasite). `DNABarcodeReader` won't help identify which of these two has occurred, but it will allow you to *optionally* use `PolyPhred` (by Debrah Nickerson) to assess the chance that a sample contains multiple barcodes. `PolyPhred` examines chromatograms for signatures of overlapping peaks.
@@ -39,5 +39,5 @@ As in `Phred`,`Phrap`, and `Consed`, we do not distribute `PolyPhred` with `DNAB
 
 ###References
 Nickerson, D.A., Tobe, V.O., and Taylor, S.L, 1997, "PolyPhred: automating the 
-         detection and genotyping of single nucleotide substitutions using fluorescence-based 
-         resequencing", Nucleic Acids Research, 25: 2745-2751.
+:         detection and genotyping of single nucleotide substitutions using fluorescence-based 
+:         resequencing", Nucleic Acids Research, 25: 2745-2751.
