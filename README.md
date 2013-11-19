@@ -44,3 +44,8 @@ As in `Phred`,`Phrap`, and `Consed`, we do not distribute `PolyPhred` with `DNAB
 Nickerson, D.A., Tobe, V.O., and Taylor, S.L, 1997, "PolyPhred: automating the
          detection and genotyping of single nucleotide substitutions using fluorescence-based
          resequencing", Nucleic Acids Research, 25: 2745-2751.
+
+##NCBI `BLAST`
+In some cases, the user may have a specific database that they wish to use to annotate their barcodes. For instance, the user might have a database of barcodes of known organisms in his or her study area; or, they may have a database of organisms that are listed under CITES Appendix I. To be able to query these databases, the user will require at least a FASTA file with all the barcode sequences of interest, with suitable annotation, and a local copy of `BLAST` software. Instructions on how to obtain a copy and install `BLAST` locally can be found [here](http://www.ncbi.nlm.nih.gov/guide/howto/run-blast-local/). All the command line instructions for running `BLAST` locally can be found [here](http://www.ncbi.nlm.nih.gov/books/NBK1763/). However, the user does not need to know any of these commands if he/she wants to use `DNABarcodeReader` as is. They simply need to make sure it is installed.
+
+
