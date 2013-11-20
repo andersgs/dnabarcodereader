@@ -84,7 +84,7 @@ Again, if all goes well, you should get the command prompt back with no messages
 
         >>> help(zdb)
         
-Again, typing `q` will take out of the help screen, and return you to the command prompt.
+And as before, typing `q` will take you out of the help screen, and return you to the command prompt.
 
 If you have reached here with no hicups, then you have all the `Python` prerequisites to run `DNABarcodeReader`. Now, let us move on to some of the others.
 
@@ -100,9 +100,9 @@ To be able to run local BLAST queries against your own database of barcodes, you
 
         #make sure you at the root of your home dir
         cd ~/
-        #make a directory called sources
+        #if you already haven't made one, make a directory called sources
         mkdir sources
-        #move into sources, and download the dmg file
+        #move into sources, and download the tar.gz file
         cd sources
         wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.28+-universal-macosx.tar.gz
         
