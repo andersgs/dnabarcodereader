@@ -56,9 +56,42 @@ Before you exit the `Python` interpreter, let us see if `BioPython` and `ZODB` h
 
         >>> from Bio import SeqIO
 
+If all works well, you should get no error messages, and a prompt ready to enter the next command. You can then type the following to get some information on the SeqIO module:
 
+        >>> help(SeqIO)
+	
+This will produce the following printout (only partially reproduced here):
+
+    	Help on package Bio.SeqIO in Bio:
+    
+        NAME
+    	    Bio.SeqIO - Sequence input/output as SeqRecord objects.
+    	
+    	FILE
+    	    /opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/Bio/SeqIO/__init__.py
+    	
+    	DESCRIPTION
+    	    Bio.SeqIO is also documented at U{http://biopython.org/wiki/SeqIO} and by
+    	    a whole chapter in our tutorial:
+    	     - U{http://biopython.org/DIST/docs/tutorial/Tutorial.html}
+    	     - U{http://biopython.org/DIST/docs/tutorial/Tutorial.pdf}
+
+You can press `q` to exit the help screen and return to the command prompt. We can now test your installation of the `ZODB` library. Type the following into the `Python` prompt:
+
+        >>> import ZODB as zdb
+    
+Again, if all goes well, you should get the command prompt back with no messages. You can read about `ZODB` by typing:
+
+        >>> help(zdb)
+        
+Again, typing `q` will take out of the help screen, and return you to the command prompt.
+
+If you have reached here with no hicups, then you have all the `Python` prerequisites to run `DNABarcodeReader`. Now, let us move on to some of the others.
 
 ###Step 4 – Install `Phred`, `Phrap`, and `Consed`:
 1.  Contact the authors to obtain a license (instructions here: [http://www.phrap.org/consed/consed.html#howToGet](http://www.phrap.org/consed/consed.html#howToGet). Download the installers once you receive the email with instructions on where to download them from.
 
 2.  
+
+###Step 5 - Install NCBI BLAST +
+To be able to run local BLAST queries against your own database of barcodes, you will need a local copy of the various BLAST programs. 
