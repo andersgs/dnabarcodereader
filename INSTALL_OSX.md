@@ -94,4 +94,52 @@ If you have reached here with no hicups, then you have all the `Python` prerequi
 2.  
 
 ###Step 5 - Install NCBI BLAST +
-To be able to run local BLAST queries against your own database of barcodes, you will need a local copy of the various BLAST programs. 
+To be able to run local BLAST queries against your own database of barcodes, you will need a local copy of the various BLAST programs. NCBI provides pre-compiled executables for all its BLAST software. There is a GUI way of doing things, but in the interest of keeping everything in the command line, I will layout the steps as if there was no GUI alternative.
+
+1. Download and install the latest stable version from NCBI from [ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/). I have checked, and the latest mac version is `ncbi-blast-2.2.28+-universal-macosx.tar.gz`. So, open a Terminal window, and type in the following:
+
+        #make sure you at the root of your home dir
+        cd ~/
+        #make a directory called sources
+        mkdir sources
+        #move into sources, and download the dmg file
+        cd sources
+        wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.2.28+-universal-macosx.tar.gz
+        
+        #once download completes, unpack the the file
+        tar xvzf ncbi-blast-2.2.28+-universal-macosx.tar.gz
+        
+        #this will create an ncbi-blast-2.2.28+ folder
+        cd ncbi-blast-2.2.28+/
+        
+        #create a directory to keep the binaries
+        sudo mkdir -p /usr/local/ncbi/blast/bin/
+        sudo mkdir -p /usr/local/ncbi/blast/doc/
+        sudo cp bin/* /usr/local/ncbi/blast/bin/
+        sudo cp doc/* /usr/local/ncbi/blast/doc/
+        
+        #make sure the ncbi bin is in your search path
+        sudo echo 'export PATH=/usr/local/ncbi/blast/bin:$PATH' >> ~/.profile
+        
+        #restart your bash shell
+        source ~/.profile
+        
+        #do some clean up
+        cd ~/sources
+        rm -rdf ncbi-blast-2.2.28+
+
+####Test your NCBI BLAST+ installation
+At this point, you should have a functional installation of all the BLAST flavours in your system. You should be able to call the programs from any location, and from any `Terminal` window. To test this, open a new `Terminal` window and type the following in the prompt:
+
+        blastn -help
+        
+If your installation is working, you will see a bunch of text being printed out to screen outlining how to use `blastn`. The first two lines will look something like this:
+
+        USAGE
+            blastn [-h] [-help] [-import_search_strategy filename]
+
+If that is what you have, congratulations! You now have `BLAST` running on your system, and you are closer than ever to being able to run `DNABarcodeReader`.
+
+        
+
+        
